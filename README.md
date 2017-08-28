@@ -1,4 +1,4 @@
-# rainbowcoat
+# rainbowcoat [![Build Status](https://travis-ci.org/softprops/rainbowcoat.svg?branch=master)](https://travis-ci.org/softprops/rainbowcoat)
 
 > Adds rainbows over writers (inspired by [lolcat](https://github.com/busyloop/lolcat))
 
