@@ -5,10 +5,11 @@
 //! # examples
 //!
 //! ```rust
+//! use std::io::Write;
 //! write!(
-//!   &mut rainbowcat::stdout(),
+//!   &mut rainbowcoat::stdout(),
 //!   "hello rainbow"
-//! )
+//! );
 //! ```
 extern crate  ansi_term;
 
@@ -24,10 +25,11 @@ use ansi_term::Color;
 /// # examples
 ///
 /// ```rust
+/// use std::io::Write;
 /// write!(
-///   &mut rainbowcat::stdout(),
+///   &mut rainbowcoat::stdout(),
 ///   "hello rainbow"
-/// )
+/// );
 /// ```
 pub struct Cat<W> {
     wrapped: W,

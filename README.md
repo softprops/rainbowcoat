@@ -4,6 +4,8 @@
 
 ```rust
 extern crate rainbowcoat;
+use std::io::Write;
+
 fn main() {
   write!(
     &mut rainbowcoat::stdout(),
