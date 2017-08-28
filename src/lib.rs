@@ -104,7 +104,7 @@ impl<W: Write> Write for Colors<W> {
 
 #[cfg(test)]
 mod tests {
-    use super::Colors;
+    use super::{stdout, Colors};
     use ansi_term::Color;
     use std::io::{self, Write};
 
@@ -116,5 +116,10 @@ mod tests {
     #[test]
     fn colors_writes() {
         assert!(write!(&mut Colors::new(Vec::new()), "hello").is_ok());
+    }
+
+    #[test]
+    fn stdout_convenience() {
+        assert!(write!(&mut stdout(), "hello").is_ok());
     }
 }
