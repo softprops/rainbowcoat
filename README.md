@@ -33,4 +33,6 @@ fn main() {
 }
 ```
 
+![](coat.png)
+
 Doug Tangren (softprops) 2017
