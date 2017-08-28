@@ -31,20 +31,20 @@ use ansi_term::Color;
 ///   "hello rainbow"
 /// );
 /// ```
-pub struct Cat<W> {
+pub struct Colors<W> {
     wrapped: W,
     spread: f64,
     frequency: f64,
     seed: f64,
 }
 
-/// Convenience function that wraps `std::io::Stdout` in  a`Cat` instance
-pub fn stdout() -> Cat<Stdout> {
-    Cat::new(io::stdout())
+/// Convenience function that wraps `std::io::Stdout` in a`Colors` instance
+pub fn stdout() -> Colors<Stdout> {
+    Colors::new(io::stdout())
 }
 
-impl<W> Cat<W> {
-    /// Creates a new `Cat` instance with default spread of `3.0`,
+impl<W> Colors<W> {
+    /// Creates a new `Colors` instance with default spread of `3.0`,
     /// frequency of `0.1` and seed valud of `0.0`
     pub fn new(wrapped: W) -> Self {
         Self::configure(wrapped, 3.0, 0.1, 0.0)
@@ -69,7 +69,7 @@ impl<W> Cat<W> {
     }
 }
 
-impl<W: Write> Write for Cat<W> {
+impl<W: Write> Write for Colors<W> {
     fn write(&mut self, buf: &[u8]) -> io::Result<usize> {
         for line in ::std::str::from_utf8(buf).unwrap().lines() {
             let mut seed = self.seed;
@@ -92,11 +92,11 @@ impl<W: Write> Write for Cat<W> {
 
 #[cfg(test)]
 mod tests {
-    use super::Cat;
+    use super::Colors;
     use ansi_term::Color;
     use std::io;
     #[test]
-    fn cat_colors() {
-        assert_eq!(Cat::new(io::sink()).color(0.0), Color::RGB(128, 237, 18))
+    fn colors_colors() {
+        assert_eq!(Colors::new(io::sink()).color(0.0), Color::RGB(128, 237, 18))
     }
 }

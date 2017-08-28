@@ -8,7 +8,9 @@ use std::io::Write;
 
 fn main() {
   write!(
-    &mut rainbowcoat::stdout(),
+    &mut rainbowcoat::Colors::configure(
+      io::stdout(), 2.0, 0.4, 0.0
+    ),
     "              _
                  ( |
                    |
