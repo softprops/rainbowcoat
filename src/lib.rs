@@ -94,9 +94,15 @@ impl<W: Write> Write for Colors<W> {
 mod tests {
     use super::Colors;
     use ansi_term::Color;
-    use std::io;
+    use std::io::{self, Write};
+
     #[test]
     fn colors_colors() {
         assert_eq!(Colors::new(io::sink()).color(0.0), Color::RGB(128, 237, 18))
+    }
+
+    #[test]
+    fn colors_writes() {
+        assert!(write!(&mut Colors::new(Vec::new()), "hello").is_ok());
     }
 }
