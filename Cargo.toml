@@ -9,6 +9,8 @@ homepage = "https://github.com/softprops/rainbowcoat"
 repository = "https://github.com/softprops/rainbowcoat"
 keywords = ["lolcat", "rainbows", "rainbow"]
 license = "MIT"
+travis-ci = { repository = "softprops/rainboatcoat", branch = "master" }
+coveralls = { repository = "softprops/rainboatcoat", branch = "master", service = "github" }
 
 [dependencies]
  ansi_term = "0.9"
