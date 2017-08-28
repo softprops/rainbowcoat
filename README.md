@@ -2,6 +2,19 @@
 
 > Adds rainbows over writers (inspired by [lolcat](https://github.com/busyloop/lolcat))
 
+## [Documentation](https://softprops.github.io/rainbowcoat)
+
+## intall
+
+Add the following to your Cargo.toml file
+
+```toml
+[dependencies]
+rainbowcoat = "0.1"
+```
+
+## usage
+
 ```rust
 extern crate rainbowcoat;
 use std::io::Write;
