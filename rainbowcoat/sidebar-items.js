@@ -1,0 +1,1 @@
+initSidebarItems({"fn":[["stdout","Convenience function that wraps `std::io::Stdout` in a`Colors` instance"]],"struct":[["Colors","Colors writable type characters with the ascii rainbow"]]});
