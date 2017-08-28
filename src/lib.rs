@@ -24,6 +24,18 @@ use ansi_term::Color;
 ///
 /// # examples
 ///
+/// Write direcly to stdout
+///
+/// ```rust
+/// use std::io::{self, Write};
+/// write!(
+///   &mut rainbowcoat::Colors::new(io::stdout()),
+///   "hello rainbow"
+/// );
+/// ```
+///
+/// A convenience function makes this common case even easier
+///
 /// ```rust
 /// use std::io::Write;
 /// write!(
