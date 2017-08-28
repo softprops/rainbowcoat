@@ -7,7 +7,24 @@ extern crate rainbowcoat;
 fn main() {
   write!(
     &mut rainbowcoat::stdout(),
-    "hello color. how do you do?"
+    "              _
+                 ( |
+                   |
+            __,--./|.--,__
+          .`   \ \ / /    `.
+        .`      \ | /       `.
+       /   /     ^|^      \   \
+      /   / |     |o     | \   \
+     /===/  |     |      |  \===\
+    /___/   |     |o     |   \___\
+            |     |      |
+            |     |o     |
+            |     |      |
+            |     |o     |
+            |     |      |
+            |     |o     |
+            |_____/\_____|
+"
   )
 }
 ```
